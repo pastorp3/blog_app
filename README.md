@@ -64,11 +64,6 @@ These instructions will guide you through setting up the project on your local m
    rails db:migrate
    ```
 
-   (Optional) Seed the database with initial data:
-
-   ```bash
-   rails db:seed
-   ```
 ### Running the Application
 
 1. **Start the Rails server:**
