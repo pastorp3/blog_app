@@ -1,13 +1,10 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index]
+  before_action :set_post, only: [:edit, :update, :destroy]
   before_action :authorize_user!, only: [:edit, :update, :destroy]
 
   def index
     @posts = Post.order(created_at: :desc).page(params[:page]).per(10)
-  end
-
-  def show
   end
 
   def new
